@@ -14,4 +14,18 @@ int Solution::lengthOfLongestSubstring(std::string s) {
         unMap[s[i]] = i + 1;
     }
     return len;
+/*
+    int charSet[128] {};
+    int size = s.length();
+    int len{};
+
+    for(int i{}, j{}; i < size; ++i) {
+        j = charSet[s[i]] > j ? charSet[s[i]] : j;
+        len = i - j + 1 > len ? i - j + 1 : len;
+        charSet[s[i]] = i + 1;
+
+    }
+    return len;
+*/
+
 }
